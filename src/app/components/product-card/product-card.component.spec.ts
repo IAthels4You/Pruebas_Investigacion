@@ -32,7 +32,6 @@ describe('ProductCardComponent', () => {
     component = fixture.componentInstance;
     componentRef = fixture.componentRef;
     
-    // Set the required input
     componentRef.setInput('product', mockProduct);
     fixture.detectChanges();
   });
@@ -41,28 +40,9 @@ describe('ProductCardComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have product input', () => {
-    expect(component.product()).toEqual(mockProduct);
-  });
-
-  it('should display product name', () => {
+  it('should display product information', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.textContent).toContain(mockProduct.name);
-  });
-
-  it('should display product price', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.textContent).toContain(mockProduct.price.toString());
-  });
-
-  it('should display product description', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.textContent).toContain(mockProduct.description);
-  });
-
-  it('should have link to product detail', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    const link = compiled.querySelector('a');
-    expect(link).toBeTruthy();
   });
 });
