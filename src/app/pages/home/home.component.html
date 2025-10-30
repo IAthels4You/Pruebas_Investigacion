@@ -1,0 +1,61 @@
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-5xl font-bold mb-4">Bienvenido a Tienda Online</h1>
+      <p class="text-xl mb-8">Los mejores productos al mejor precio. Calidad garantizada.</p>
+      <a routerLink="/productos" 
+         class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition inline-block">
+        Ver Productos
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+      Productos Destacados
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (product of featuredProducts; track product.id) {
+        <app-product-card [product]="product" />
+      }
+    </div>
+
+    <div class="text-center mt-12">
+      <a routerLink="/productos" 
+         class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition inline-block">
+        Ver Todos los Productos
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="text-5xl mb-4">🚚</div>
+        <h3 class="text-xl font-bold mb-2">Envío Gratis</h3>
+        <p class="text-gray-600">En compras superiores a €50</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-5xl mb-4">🔒</div>
+        <h3 class="text-xl font-bold mb-2">Compra Segura</h3>
+        <p class="text-gray-600">Protegemos tus datos</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-5xl mb-4">↩️</div>
+        <h3 class="text-xl font-bold mb-2">Devoluciones</h3>
+        <p class="text-gray-600">30 días de garantía</p>
+      </div>
+    </div>
+  </div>
+</section>
+
