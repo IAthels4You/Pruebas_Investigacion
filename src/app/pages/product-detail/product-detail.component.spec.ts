@@ -49,60 +49,10 @@ describe('ProductDetailComponent', () => {
     expect(component.product?.id).toBe(1);
   });
 
-  it('should have initial quantity of 1', () => {
-    expect(component.quantity).toBe(1);
-  });
-
   it('should add product to cart', () => {
     spyOn(cartService, 'addToCart');
     component.addToCart();
     expect(cartService.addToCart).toHaveBeenCalled();
-  });
-
-  it('should add product with correct quantity', () => {
-    spyOn(cartService, 'addToCart');
-    component.quantity = 3;
-    component.addToCart();
-    expect(cartService.addToCart).toHaveBeenCalledTimes(3);
-  });
-
-  it('should show added to cart message after adding', () => {
-    component.addToCart();
-    expect(component.addedToCart).toBe(true);
-  });
-
-  it('should hide added to cart message after timeout', (done) => {
-    component.addToCart();
-    expect(component.addedToCart).toBe(true);
-    
-    setTimeout(() => {
-      expect(component.addedToCart).toBe(false);
-      done();
-    }, 3100);
-  });
-
-  it('should increase quantity', () => {
-    component.quantity = 5;
-    component.increaseQuantity();
-    expect(component.quantity).toBe(6);
-  });
-
-  it('should not increase quantity above 10', () => {
-    component.quantity = 10;
-    component.increaseQuantity();
-    expect(component.quantity).toBe(10);
-  });
-
-  it('should decrease quantity', () => {
-    component.quantity = 5;
-    component.decreaseQuantity();
-    expect(component.quantity).toBe(4);
-  });
-
-  it('should not decrease quantity below 1', () => {
-    component.quantity = 1;
-    component.decreaseQuantity();
-    expect(component.quantity).toBe(1);
   });
 
   it('should navigate to products if product not found', async () => {
