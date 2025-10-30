@@ -1,0 +1,11 @@
+<div class="counter-container">
+  <h2>Contador: {{ count }}</h2>
+  
+  <button (click)="increment()" class="btn">Incrementar</button>
+  
+  <button (click)="decrement()" class="btn">Decrementar</button>
+  
+  <button (click)="reset()" class="btn">Resetear</button>
+  
+  <p *ngIf="count > 10" class="warning">¡El contador es mayor a 10!</p>
+</div>
