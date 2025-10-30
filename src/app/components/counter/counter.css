@@ -1,0 +1,26 @@
+.counter-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.btn {
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.warning {
+  color: red;
+  font-weight: bold;
+  margin-top: 15px;
+}
