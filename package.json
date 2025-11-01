@@ -28,6 +28,7 @@
     "@angular/forms": "^20.1.0",
     "@angular/platform-browser": "^20.1.0",
     "@angular/router": "^20.1.0",
+    "cypress": "^15.5.0",
     "rxjs": "~7.8.0",
     "snyk": "^1.1300.2",
     "snyk-to-html": "^3.5.1",
